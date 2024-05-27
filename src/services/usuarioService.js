@@ -3,7 +3,7 @@ import { getCommonHeaders, redirectOnError } from "../utils/serviceUtils";
 
 export const createUsuarioParticipante = async (usuario) => {
     return new Promise((resolve, reject) => {
-        axios.post(import.meta.env.VITE_BASE_URL + 'usuariosp', usuario, getCommonHeaders())
+        axios.post(import.meta.env.VITE_BASE_URL + 'api/usuariosp', usuario, getCommonHeaders())
             .then((res) => {
                 resolve(res.data);
             }).catch((error) => {
@@ -14,7 +14,7 @@ export const createUsuarioParticipante = async (usuario) => {
 
 export const getRifaUsariosNoParticipantes = async (rifaId) => {
     return new Promise((resolve, reject) => {
-        axios.get(import.meta.env.VITE_BASE_URL + 'usuarios/noprifas/' + rifaId, getCommonHeaders())
+        axios.get(import.meta.env.VITE_BASE_URL + 'api/usuarios/noprifas/' + rifaId, getCommonHeaders())
             .then((res) => {
                 resolve(res.data);
             }).catch((error) => {
@@ -25,7 +25,7 @@ export const getRifaUsariosNoParticipantes = async (rifaId) => {
 
 export const getRifaUsuariosNoParticipantesSearch = async (rifaId, search) => {
     return new Promise((resolve, reject) => {
-        axios.get(import.meta.env.VITE_BASE_URL + 'usuarios/noprifas/search/' + rifaId + '?nombre=' + search, getCommonHeaders())
+        axios.get(import.meta.env.VITE_BASE_URL + 'api/usuarios/noprifas/search/' + rifaId + '?nombre=' + search, getCommonHeaders())
             .then((res) => {
                 resolve(res.data);
             }).catch((error) => {
@@ -36,7 +36,7 @@ export const getRifaUsuariosNoParticipantesSearch = async (rifaId, search) => {
 
 export const generarUsuariosGanadores = async (rifaId, body) => {
     return new Promise((resolve, reject) => {
-        axios.post(import.meta.env.VITE_BASE_URL + 'usuarios/partganadores/' + rifaId, body,getCommonHeaders())
+        axios.post(import.meta.env.VITE_BASE_URL + 'api/usuarios/partganadores/' + rifaId, body,getCommonHeaders())
             .then((res) => {
                 resolve(res.data);
             }).catch((error) => {
@@ -47,7 +47,7 @@ export const generarUsuariosGanadores = async (rifaId, body) => {
 
 export const listaUsuariosGanadores = async (rifaId) => {
     return new Promise((resolve, reject) => {
-        axios.get(import.meta.env.VITE_BASE_URL + 'usuarios/ganadores/' + rifaId, getCommonHeaders())
+        axios.get(import.meta.env.VITE_BASE_URL + 'api/usuarios/ganadores/' + rifaId, getCommonHeaders())
             .then((res) => {
                 resolve(res.data);
             }).catch((error) => {

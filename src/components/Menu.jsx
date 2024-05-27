@@ -22,7 +22,7 @@ const Menu = () => {
         getUserInfo();
     }, [])
     const getUserInfo = () => {
-        axios.get('http://localhost:3000/api/me', {
+        axios.get(import.meta.env.VITE_BASE_URL+'api/me', {
             headers: {
                 "Authorization": `Bearer ${token}`
             }
