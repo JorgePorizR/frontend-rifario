@@ -24,4 +24,4 @@ Sigue estos pasos para configurar y ejecutar el proyecto localmente:
 1. Clona el repositorio desde GitHub:
 
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone <[REPOSITORIO](https://github.com/JorgePorizR/frontend-rifario.git)>
