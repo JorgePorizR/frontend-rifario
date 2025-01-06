@@ -24,4 +24,77 @@ Sigue estos pasos para configurar y ejecutar el proyecto localmente:
 1. Clona el repositorio desde GitHub:
 
    ```bash
-   git clone <[REPOSITORIO](https://github.com/JorgePorizR/frontend-rifario.git)>
+   git clone <URL_DEL_REPOSITORIO>
+
+2. Navega al directorio del proyecto:
+
+   ```bash
+   cd practicotres-frontend
+
+3. Instala las dependencias del proyecto:
+
+   ```bash
+   npm install
+
+4. Ejecuta el proyecto localmente:
+
+   ```bash
+   npm run dev
+
+La aplicación se ejecutará en el puerto 5173 por defecto. Abre tu navegador y navega a http://localhost:5173 para acceder al frontend.
+
+## Estructura del Proyecto
+
+La estructura del proyecto es la siguiente:
+
+   ```bash
+   practicotres-frontend/
+   ├── public/                  # Archivos estáticos
+   ├── src/                     # Código fuente
+   │   ├── assets/              # Archivos de recursos (imágenes, fuentes, etc.)
+   │   ├── components/          # Componentes de React
+   │   ├── pages/               # Páginas de la aplicación
+   │   ├── services/            # Funciones para interactuar con la API
+   │   ├── utils/               # Funciones aparte para usar
+   │   ├── index.css            # Diseño base del proyecto
+   │   └── main.jsx             # Punto de entrada
+   ├── .env                     # Variables de entorno
+   ├── package.json             # Dependencias y scripts
+   └── vite.config.js           # Configuración de Vite
+   ```
+## Funcionalidades
+
+El frontend ofrece las siguientes funcionalidades:
+
+### Autenticación
+
+- **Registro**: Permite registrar un nuevo usuario.
+- **Inicio de sesión**: Permite que los usuarios registrados inicien sesión.
+- **Ver perfil**: Muestra los detalles del usuario autenticado.
+
+### Rifas
+
+- **Ver todas las rifas**: Muestra una lista de rifas activas.
+- **Crear rifa**: Permite a los usuarios crear nuevas rifas.
+- **Ver rifa**: Muestra los detalles de una rifa específica.
+- **Buscar rifas**: Permite buscar rifas por nombre.
+- **Actualizar rifa**: Permite editar los detalles de una rifa.
+- **Eliminar rifa**: Permite eliminar una rifa.
+
+### Participaciones
+
+- **Ver participantes**: Muestra la lista de participantes en cada rifa.
+- **Agregar participación**: Permite que un usuario se inscriba en una rifa.
+
+## Variables de Entorno
+
+Asegúrate de configurar las siguientes variables de entorno en el archivo `.env`:
+
+   ```bash
+   VITE_BASE_URL=http://localhost:3000/api
+   ```
+
+La variable `VITE_BASE_URL` se usa para definir la URL base de la API.
+
+
+
